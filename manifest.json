@@ -52,7 +52,9 @@
       ],
       "css": [
         "src/inject/inject.css"
-      ]
+      ],
+      "js": ["js/jquery/jquery.min.js", "js/lscache.js", "js/content.js"],
+      "run_at": "document_start"
     },
     {
       "matches": [
