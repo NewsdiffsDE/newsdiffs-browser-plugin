@@ -1,0 +1,15 @@
+ {
+  "name": "jQuery DOM",
+  "manifest_version": 2,
+  "version": "1",
+  "description": "Manipulate the DOM when the page is done loading",
+  "background_page": "background.html",
+  "browser_action": {
+    "name": "Manipulate DOM"
+  },
+  "content_scripts": [ {
+    "js": [ "js/jquery/jquery.min.js", "diff_match_patch_uncompressed.js", "background.js" ],
+    "matches": [ "http://*.zeit.de/*"],
+    "run_at": "document_end"
+  }]
+}
