@@ -1,17 +1,37 @@
 <!doctype html>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-</style>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<head>
+	<title>Getting Started Extension's Popup</title>
 
-<div id="mainPopup">
-<h1>Newsdiffs Chrome Plugin</h1>
-<p>Hier kommt später die Menüauswhal rein</p>
-</div>
+	<style type="text/css">
+		#main {
+			padding: 10px;
+			height: 100px;
+			width: 300px;
+			font-family: Helvetica, Ubuntu, Arial, sans-serif;
+		}
+		h1 {
+			font-size: 2em;
+		}
+	</style>
+
+	<!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+	<script src="/js/jquery/jquery.js"></script>
+	<script src="popup.js"></script>
+</head>
+<body>
+<div id="main"></div>
+
+</body>
+</html>
+

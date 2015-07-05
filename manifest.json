@@ -53,8 +53,8 @@
       "css": [
         "src/inject/inject.css"
       ],
-      "js": ["js/jquery/jquery.min.js", "js/lscache.js", "js/content.js"],
-      "run_at": "document_start"
+      "js": ["js/jquery/jquery.min.js", "js/lscache.js", "js/content.js", "js/diff_match_patch_uncompressed.js"],
+      "run_at": "document_end"
     },
     {
       "matches": [

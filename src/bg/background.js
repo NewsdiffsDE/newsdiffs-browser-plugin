@@ -18,7 +18,7 @@ var runtime = chrome.runtime && chrome.runtime.sendMessage ?
 var urls = {};
 
 chrome.pageAction.onClicked.addListener(function(tab) {
-  chrome.tabs.create({
+     chrome.tabs.create({
     'index': tab.index + 1,
     'url': urls[tab.id]
   });
