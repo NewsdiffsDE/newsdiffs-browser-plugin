@@ -1,15 +1,22 @@
  {
-  "name": "jQuery DOM",
+  "name": "NewsDiffsDE Browser Plugin",
   "manifest_version": 2,
   "version": "1",
-  "description": "Manipulate the DOM when the page is done loading",
-  "background_page": "background.html",
+  "description": "Display content changes on news websites",
   "browser_action": {
     "name": "Manipulate DOM"
   },
   "content_scripts": [ {
     "js": [ "js/jquery/jquery.min.js", "diff_match_patch_uncompressed.js", "background.js" ],
-    "matches": [ "http://*.zeit.de/*"],
+    "matches": [
+	"*://*.bild.de/*", 
+        "*://*.zeit.de/*", 
+        "*://*.focus.de/*", 
+        "*://*.spiegel.de/*", 
+        "*://*.stern.de/*", 
+        "*://*.faz.de/*", 
+        "*://*.rponline.de/*", 
+        "*://*.sueddeutsche.de/*"],
     "run_at": "document_end"
   }]
 }
