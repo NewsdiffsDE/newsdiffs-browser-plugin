@@ -1,76 +1,22 @@
-{
-  "name": "Newsdiffs Deutschland",
-  "version": "0.0.1",
+ {
+  "name": "NewsDiffsDE Browser Plugin",
   "manifest_version": 2,
-  "description": "Dieses Plugin befindet sich noch in der Entwicklung",
-  "homepage_url": "http://www.newsdiffs.de",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+  "version": "1",
+  "description": "Display content changes on news websites",
+  "browser_action": {
+    "name": "Manipulate DOM"
   },
-  "default_locale": "en",
-  "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": true
-  },
-  "options_page": "src/options/index.html",
-  "page_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "page action demo",
-    "default_popup": "src/page_action/page_action.html"
-  },
-  "omnibox": {
-    "keyword": "newsdiffs"
-  },
-  "permissions": [
-    "tabs",
-    "*://*.bild.de/*", 
-    "*://*.zeit.de/*", 
-    "*://*.focus.de/*", 
-    "*://*.spiegel.de/*", 
-    "*://*.stern.de/*", 
-    "*://*.faz.de/*", 
-    "*://*.rponline.de/*", 
-    "*://*.sueddeutsche.de/*",
-    "*://moreno-gummich.com/*"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.bild.de/*", 
+  "content_scripts": [ {
+    "js": [ "js/jquery/jquery.min.js", "diff_match_patch_uncompressed.js", "background.js" ],
+    "matches": [
+	"*://*.bild.de/*", 
         "*://*.zeit.de/*", 
         "*://*.focus.de/*", 
         "*://*.spiegel.de/*", 
         "*://*.stern.de/*", 
         "*://*.faz.de/*", 
         "*://*.rponline.de/*", 
-        "*://*.sueddeutsche.de/*",
-        "*://moreno-gummich.com/*"
-      ],
-      "css": [
-        "src/inject/inject.css"
-      ],
-      "js": ["js/jquery/jquery.min.js", "js/lscache.js", "js/content.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://*.bild.de/*", 
-        "*://*.zeit.de/*", 
-        "*://*.focus.de/*", 
-        "*://*.spiegel.de/*", 
-        "*://*.stern.de/*", 
-        "*://*.faz.de/*", 
-        "*://*.rponline.de/*", 
-        "*://*.sueddeutsche.de/*",
-        "*://moreno-gummich.com/*"
-      ],
-      "js": [
-        "src/inject/inject.js"
-      ]
-    }
-  ]
+        "*://*.sueddeutsche.de/*"],
+    "run_at": "document_end"
+  }]
 }
