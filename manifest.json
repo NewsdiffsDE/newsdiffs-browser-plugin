@@ -12,7 +12,7 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "src/bg/background.js"
+      "src/bg/background.js" , "js/diff_match_patch_uncompressed.js"
     ],
     "persistent": true
   },
@@ -26,6 +26,7 @@
     "keyword": "newsdiffs"
   },
   "permissions": [
+    "storage",
     "tabs",
     "*://*.bild.de/*", 
     "*://*.zeit.de/*", 
@@ -53,24 +54,8 @@
       "css": [
         "src/inject/inject.css"
       ],
-      "js": ["js/jquery/jquery.min.js", "js/lscache.js", "js/content.js", "js/diff_match_patch_uncompressed.js"],
+      "js": ["js/jquery/jquery.min.js", "js/lscache.js", "js/content.js"],
       "run_at": "document_end"
-    },
-    {
-      "matches": [
-        "*://*.bild.de/*", 
-        "*://*.zeit.de/*", 
-        "*://*.focus.de/*", 
-        "*://*.spiegel.de/*", 
-        "*://*.stern.de/*", 
-        "*://*.faz.de/*", 
-        "*://*.rponline.de/*", 
-        "*://*.sueddeutsche.de/*",
-        "*://moreno-gummich.com/*"
-      ],
-      "js": [
-        "src/inject/inject.js"
-      ]
     }
   ]
 }
