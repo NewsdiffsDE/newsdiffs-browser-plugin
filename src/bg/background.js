@@ -22,9 +22,9 @@ chrome.tabs.onRemoved.addListener(function(tabId, removeInfo) {
 });
 
 chrome[runtime].onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.action === 'lookup_page') {
+    if (request.action === 'lookup_page') {
     chrome.pageAction.show(sender.tab.id);
     // urls[sender.tab.id] = request.url;
     localStorage["var"]=request.url;
-  }
+    }
 });

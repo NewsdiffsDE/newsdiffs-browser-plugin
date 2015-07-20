@@ -1,6 +1,7 @@
-var feed_url= localStorage.var;
+var runtime = chrome.runtime && chrome.runtime.sendMessage ?
+    'runtime' : 'extension';
 
-console.log(feed_url);
+var feed_url= localStorage.var;
 
 get_feed();
 
@@ -15,7 +16,12 @@ get_feed();
                         text: "Aktuellen Artikel anzeigen",
                         title: 'Original',
                         href:"#",
-                        click: function(){location.reload();}
+                        click: function(){
+                            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                                chrome.tabs.sendMessage(tabs[0].id, {
+                                    'action': "reload"
+                                });
+                            });}
                     })).prependTo(main);
                     $(xml).find('entry').each(function(){
                         var sTitle = $(this).find('id').text();
@@ -24,7 +30,12 @@ get_feed();
                             title: 'Versionsvergleich',
                             href:"#",
                             click: function () {
-                                window.open(sTitle);
+                                chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                                    chrome.tabs.sendMessage(tabs[0].id, {
+                                        'action': "get_text",
+                                        'url': sTitle
+                                    });
+                                });
                             }
                         })).prependTo(main);
                         i--;

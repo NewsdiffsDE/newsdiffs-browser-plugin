@@ -12,10 +12,12 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "src/bg/background.js" , "js/diff_match_patch_uncompressed.js"
+      "js/jquery/jquery.min.js", "js/diff_match_patch_uncompressed.js", "src/bg/background.js"
     ],
     "persistent": true
+
   },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "options_page": "src/options/index.html",
   "page_action": {
     "default_icon": "icons/icon19.png",
@@ -36,7 +38,8 @@
     "*://*.faz.de/*", 
     "*://*.rponline.de/*", 
     "*://*.sueddeutsche.de/*",
-    "*://moreno-gummich.com/*"
+    "*://moreno-gummich.com/*",
+    "*://*.nytimes.com/*"
   ],
   "content_scripts": [
     {
@@ -49,12 +52,13 @@
         "*://*.faz.de/*", 
         "*://*.rponline.de/*", 
         "*://*.sueddeutsche.de/*",
-        "*://moreno-gummich.com/*"
+        "*://moreno-gummich.com/*",
+        "*://*.nytimes.com/*"
       ],
       "css": [
         "src/inject/inject.css"
       ],
-      "js": ["js/jquery/jquery.min.js", "js/lscache.js", "js/content.js"],
+      "js": ["js/jquery/jquery.min.js", "js/lscache.js","js/diff_match_patch_uncompressed.js", "js/content.js"],
       "run_at": "document_end"
     }
   ]
