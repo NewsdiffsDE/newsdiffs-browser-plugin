@@ -1,0 +1,32 @@
+#compare {
+    color: rgb(0, 0, 0);
+    display: block;
+    font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    height: 2413px;
+    line-height: 19.488000869751px;
+    margin-bottom: 15px;
+    width: 520px;
+}
+
+#compare h2{
+    color: rgb(0, 0, 0);
+    display: inline;
+    font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    height: auto;
+    line-height: 27.9839992523193px;
+    width: auto;
+}
+
+del {    
+    background-color: #ffa0a0;
+}  
+ins {    
+	background-color: #a0ffa0;  
+}

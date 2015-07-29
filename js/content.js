@@ -17,11 +17,22 @@ function send_feed_url() {
 
 var test = window.location.hostname;
 
+function make_base_auth(user, password) {
+  var tok = user + ':' + password;
+  var hash = btoa(tok);
+  return "Basic " + hash;
+}
+
 function getText(ur) {
     $.ajax({
         type: "GET",
         url: ur,
         dataType: "html",
+        async: false,
+        data: '{}',
+        beforeSend: function (xhr){
+            xhr.setRequestHeader('Authorization', make_base_auth("nduser", "NewsdiffsDE2015"));
+        },
         success: function(data){
             vorbereitungen(test);
             var script = data.substring(data.indexOf("var text1 = '"), data.length);
@@ -67,11 +78,11 @@ function vorbereitungen(url){
             articleDiv = $('#story');
             break;
     }
-
+    var cssFile = website.split(".")[1];
+	$('head').append('<link rel="stylesheet" href="'+chrome.extension.getURL('css/'+cssFile+'.css')+'" type="text/css" />');
     articleDiv.empty();
     articleDiv.append("<div id='compare'></div>");
     $("<div id='ueberschrift'></div>").insertBefore("#compare");
-    articleDiv.prepend("<style type='text/css'>  del {    background-color: #ffa0a0;  }  ins {    background-color: #a0ffa0;  }  </style>");
 }
 
 send_feed_url();

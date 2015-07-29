@@ -1,0 +1,23 @@
+#compare {
+color: rgb(51, 51, 51);
+  display: block;
+  font-family: georgia, 'times new roman', times, serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 23px;
+  margin-bottom: 16px;
+  margin-left: 135px;
+  margin-right: 0px;
+  margin-top: 0px;
+  max-width: 540px;
+  width: 510px;
+}
+#compare h2{
+	color: red;
+}
+del {    
+	background-color: #ffa0a0;  
+}  
+ins {    
+	background-color: #a0ffa0;  
+}  

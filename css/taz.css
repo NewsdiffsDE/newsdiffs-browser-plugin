@@ -1,0 +1,47 @@
+#compare {
+    color: rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    display: block;
+    font-family: Quodana, Verdana, 'DejaVu Sans', 'Bitstream Vera Sans', Helvetica, sans-serif;
+    font-size: 14.9499998092651px;
+    height: 189px;
+    line-height: 21px;
+    margin-bottom: -12px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 25px;
+    padding-bottom: 33px;
+    padding-left: 56px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    top: -7px;
+    width: 516px;
+    z-index: -1;
+}
+#compare h2{
+    color: rgb(51, 51, 51);
+    display: block;
+    font-family: taz_xbold;
+    font-size: 40px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 42px;
+    margin-bottom: -15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 21px;
+    padding-left: 2px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    top: -7px;
+}
+
+del {    
+    background-color: #ffa0a0;
+}  
+ins {    
+	background-color: #a0ffa0;  
+}  
