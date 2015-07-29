@@ -1,0 +1,45 @@
+*, *:after, *:before
+  box-sizing: border-box
+
+body
+  font-family: 'Avenir', 'Helvetica Neue', Helvetica, sans-serif
+  color: rgb(32, 32, 37)
+
+ul, li
+  margin: 0
+  padding: 0
+  list-style: none
+
+ul
+  text-align: left
+  overflow: hidden
+  font-size: 1.5rem
+  margin-top: 1.5rem
+
+li
+  padding: 1em
+  max-width: 800px
+  min-width: 175px
+  margin: auto
+  position: relative
+  border-bottom: 1px solid lightgrey
+
+  &:last-child
+    border-bottom: none
+
+  &:hover
+    color: white
+    &:before
+      transform: scaleY(1)
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: -100%
+    width: 1000%
+    height: 100%
+    background: #e3e3e3
+    z-index: -1
+    transition: .4s transform
+    transform: scaleY(0)
