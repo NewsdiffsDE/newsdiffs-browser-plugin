@@ -22,7 +22,7 @@ get_feed();
                                     'action': "reload"
                                 });
                             });}
-                    })).prependTo(main);
+                    })).prependTo(original);
                     $(xml).find('entry').each(function(){
                         var sTitle = $(this).find('id').text();
                         $('<li>').html($('<a>',{
@@ -37,7 +37,7 @@ get_feed();
                                     });
                                 });
                             }
-                        })).prependTo(main);
+                        })).prependTo(version);
                         i--;
                     });
                 },

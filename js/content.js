@@ -2,11 +2,10 @@ var runtime = chrome.runtime && chrome.runtime.sendMessage ?
     'runtime' : 'extension';
 
 var article_url = window.location.hostname + window.location.pathname;
-if(window.location.hostname == "www.stern.de"){
-    article_url = $('meta[property=og\\:url]').attr("content");
-}
-var feed_url = 'http://newsdiffs.org/feed/article-history/' + article_url;
-var page_url = 'http://moreno-gummich.com/article-history/' + article_url;
+//if(window.location.hostname == "www.stern.de"){
+//    article_url = $('meta[property=og\\:url]').attr("content");
+//}
+var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=http://' + article_url;
 
 function send_feed_url() {
     chrome[runtime].sendMessage({
