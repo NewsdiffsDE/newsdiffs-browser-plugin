@@ -36,7 +36,7 @@ switch (site_url) {
         break;
 }
 
-var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=http://' + article_url;
+var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=' + article_url;
 //var feed_url = 'http://moreno-gummich.com/feed/article-history/?url=' + article_url;
 function send_feed_url() {
     chrome[runtime].sendMessage({
@@ -58,7 +58,6 @@ function getText(ur) {
         type: "GET",
         url: ur,
         dataType: "html",
-        async: false,
         data: '{}',
         beforeSend: function (xhr){
             xhr.setRequestHeader('Authorization', make_base_auth("nduser", "NewsdiffsDE2015"));

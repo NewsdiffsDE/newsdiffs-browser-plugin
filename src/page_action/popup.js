@@ -5,14 +5,20 @@ var feed_url= localStorage.var;
 
 get_feed();
 
+function make_base_auth(user, password) {
+  var tok = user + ':' + password;
+  var hash = btoa(tok);
+  return "Basic " + hash;
+}
     function get_feed() {
                 $.ajax({
                 type: "GET",
                 url: feed_url,
                 dataType: "xml",
-                    beforeSend: function (xhr){
-                        xhr.setRequestHeader('Authorization', "Basic nduser:NewsdiffsDE2015");
-                    },
+                data: '{}',
+                beforeSend: function (xhr){
+                    xhr.setRequestHeader('Authorization', make_base_auth("nduser", "NewsdiffsDE2015"));
+                },
                 success: function(xml){
                     var i = $(xml).find('entry').length;
                     $('<li>').html($('<a>',{
