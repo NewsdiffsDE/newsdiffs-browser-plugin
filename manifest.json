@@ -39,7 +39,7 @@
     "*://*.spiegel.de/*", 
     "*://*.stern.de/*", 
     "*://*.faz.de/*", 
-    "*://*.rponline.de/*", 
+    "*://*.rp-online.de/*",
     "*://*.sueddeutsche.de/*",
     "*://moreno-gummich.com/*",
     "*://*.nytimes.com/*"
@@ -53,13 +53,10 @@
         "*://*.spiegel.de/*", 
         "*://*.stern.de/*", 
         "*://*.faz.de/*", 
-        "*://*.rponline.de/*", 
+        "*://*.rp-online.de/*",
         "*://*.sueddeutsche.de/*",
         "*://moreno-gummich.com/*",
         "*://*.nytimes.com/*"
-      ],
-      "css": [
-        "src/inject/inject.css"
       ],
       "js": ["js/jquery/jquery.min.js", "js/lscache.js","js/diff_match_patch_uncompressed.js", "js/content.js"],
       "run_at": "document_end"

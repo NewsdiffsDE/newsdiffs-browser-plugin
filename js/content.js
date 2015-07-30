@@ -2,11 +2,42 @@ var runtime = chrome.runtime && chrome.runtime.sendMessage ?
     'runtime' : 'extension';
 
 var article_url = window.location.hostname + window.location.pathname;
-//if(window.location.hostname == "www.stern.de"){
-//    article_url = $('meta[property=og\\:url]').attr("content");
-//}
-var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=http://' + article_url;
 
+var site_url = window.location.hostname;
+
+switch (site_url) {
+    case 'www.stern.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
+    case 'www.zeit.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
+    case 'www.faz.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
+    case 'www.focus.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
+    case 'www.n-tv.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
+    case 'www.spiegel.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
+    case 'www.sueddeutsche.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        alert(article_url);
+        break;
+    case 'www.rp-online.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
+    case 'www.bild.de':
+        article_url = $('meta[name=og\\:url]').attr("content");
+        break;
+}
+
+var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=http://' + article_url;
+//var feed_url = 'http://moreno-gummich.com/feed/article-history/?url=' + article_url;
 function send_feed_url() {
     chrome[runtime].sendMessage({
         'action': 'lookup_page',
@@ -70,7 +101,7 @@ function vorbereitungen(url){
         case "www.welt.de":
             articleDiv = $('.storyBody');
             break;
-        case "www.rp-online.de/":
+        case "www.rp-online.de":
             articleDiv = $('article');
             break;
         case "www.nytimes.com":
@@ -78,7 +109,7 @@ function vorbereitungen(url){
             break;
     }
     var cssFile = website.split(".")[1];
-	$('head').append('<link rel="stylesheet" href="'+chrome.extension.getURL('css/'+cssFile+'.css')+'" type="text/css" />');
+    $('head').append('<link rel="stylesheet" href="'+chrome.extension.getURL('css/'+cssFile+'.css')+'" type="text/css" />');
     articleDiv.empty();
     articleDiv.append("<div id='compare'></div>");
     $("<div id='ueberschrift'></div>").insertBefore("#compare");

@@ -10,6 +10,9 @@ get_feed();
                 type: "GET",
                 url: feed_url,
                 dataType: "xml",
+                    beforeSend: function (xhr){
+                        xhr.setRequestHeader('Authorization', "Basic nduser:NewsdiffsDE2015");
+                    },
                 success: function(xml){
                     var i = $(xml).find('entry').length;
                     $('<li>').html($('<a>',{

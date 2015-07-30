@@ -1,3 +1,12 @@
+
+del {
+    background-color: #ffa0a0;
+}
+
+ins {
+    background-color: #a0ffa0;
+}
+
 #compare {
     color: rgb(0, 0, 0);
     display: block;
@@ -27,9 +36,3 @@
     width: 940px;
 }
 
-del {    
-    background-color: #ffa0a0;
-}  
-ins {    
-	background-color: #a0ffa0;  
-}
