@@ -82,6 +82,7 @@ function getText(ur) {
             var script = data.substring(data.indexOf("var text1 = '"), data.length);
             script = script.substring(0, script.indexOf("</script>"));
             eval(script);
+            $("#ueberschrift").append("<h2>Newsdiffs.de - Vergleich</h2>");
         }
     });
 }
