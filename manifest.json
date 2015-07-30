@@ -38,10 +38,11 @@
     "*://*.focus.de/*", 
     "*://*.spiegel.de/*", 
     "*://*.stern.de/*", 
-    "*://*.faz.de/*", 
+    "*://*.faz.net/*",
     "*://*.rp-online.de/*",
     "*://*.sueddeutsche.de/*",
     "*://moreno-gummich.com/*",
+    "*://*.newsdiffs.de/*",
     "*://*.nytimes.com/*"
   ],
   "content_scripts": [
@@ -52,10 +53,11 @@
         "*://*.focus.de/*", 
         "*://*.spiegel.de/*", 
         "*://*.stern.de/*", 
-        "*://*.faz.de/*", 
+        "*://*.faz.net/*",
         "*://*.rp-online.de/*",
         "*://*.sueddeutsche.de/*",
         "*://moreno-gummich.com/*",
+        "*://*.newsdiffs.de/*",
         "*://*.nytimes.com/*"
       ],
       "js": ["js/jquery/jquery.min.js", "js/lscache.js","js/diff_match_patch_uncompressed.js", "js/content.js"],

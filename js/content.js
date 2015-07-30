@@ -12,7 +12,7 @@ switch (site_url) {
     case 'www.zeit.de':
         article_url = $('meta[property=og\\:url]').attr("content");
         break;
-    case 'www.faz.de':
+    case 'www.faz.net':
         article_url = $('meta[property=og\\:url]').attr("content");
         break;
     case 'www.focus.de':
@@ -26,7 +26,6 @@ switch (site_url) {
         break;
     case 'www.sueddeutsche.de':
         article_url = $('meta[property=og\\:url]').attr("content");
-        alert(article_url);
         break;
     case 'www.rp-online.de':
         article_url = $('meta[property=og\\:url]').attr("content");
@@ -36,8 +35,9 @@ switch (site_url) {
         break;
 }
 
-var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=' + article_url;
-//var feed_url = 'http://moreno-gummich.com/feed/article-history/?url=' + article_url;
+//var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=' + article_url;
+var feed_url = 'http://moreno-gummich.com/feed/article-history/?url=' + article_url;
+
 function send_feed_url() {
     chrome[runtime].sendMessage({
         'action': 'lookup_page',
@@ -45,7 +45,13 @@ function send_feed_url() {
     });
 }
 
-var test = window.location.hostname;
+function check_feed_url() {
+    $.get(feed_url, function(data, textStatus, jqXHR) {
+        if ($(data).find('entry').length > 0) {
+            send_feed_url();
+        }
+    }, 'xml');
+}
 
 function make_base_auth(user, password) {
   var tok = user + ':' + password;
@@ -63,7 +69,7 @@ function getText(ur) {
             xhr.setRequestHeader('Authorization', make_base_auth("nduser", "NewsdiffsDE2015"));
         },
         success: function(data){
-            vorbereitungen(test);
+            vorbereitungen(site_url);
             var script = data.substring(data.indexOf("var text1 = '"), data.length);
             script = script.substring(0, script.indexOf("</script>"));
             eval(script);
@@ -79,7 +85,7 @@ function vorbereitungen(url){
         case "www.bild.de":
             articleDiv = $("article");
             break;
-        case "www.faz.de":
+        case "www.faz.net":
             articleDiv = $('.FAZArtikelContent');
             break;
         case "www.focus.de":
@@ -114,7 +120,7 @@ function vorbereitungen(url){
     $("<div id='ueberschrift'></div>").insertBefore("#compare");
 }
 
-send_feed_url();
+check_feed_url();
 
 chrome[runtime].onMessage.addListener(function(request, sender, sendResponse) {
 
