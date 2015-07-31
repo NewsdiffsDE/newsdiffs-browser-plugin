@@ -14,6 +14,9 @@ switch (site_url) {
     case 'www.zeit.de':
         article_url = $('meta[property=og\\:url]').attr("content");
         break;
+    case 'www.welt.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
+        break;
     case 'www.faz.net':
         article_url = $('meta[property=og\\:url]').attr("content");
         break;
@@ -33,7 +36,14 @@ switch (site_url) {
         article_url = $('meta[property=og\\:url]').attr("content");
         break;
     case 'www.bild.de':
-        article_url = $('meta[name=og\\:url]').attr("content");
+        if ($('meta[property=og\\:url]').length>0){
+            article_url = $('meta[property=og\\:url]').attr("content");
+        } else{
+            article_url = $('meta[name=og\\:url]').attr("content");
+        }
+        break;
+    case 'www.taz.de':
+        article_url = $('meta[property=og\\:url]').attr("content");
         break;
 }
 
@@ -41,7 +51,6 @@ switch (site_url) {
 //var feed_url = 'http://dev.newsdiffs.de/feed/article-history/?url=' + article_url;
 var feed_url = 'http://moreno-gummich.com/feed/article-history/?url=' + article_url;
 
-//Sends a message in the extension framework, can be catched with lookup_page
 function send_feed_url() {
     chrome[runtime].sendMessage({
         'action': 'lookup_page',
@@ -85,6 +94,8 @@ function getText(ur) {
             $("#ueberschrift").append("<h2>Newsdiffs.de - Vergleich</h2>");
         }
     });
+
+
 }
 //Checks the url and defines the div which should be used to replace the text
 function vorbereitungen(url){
@@ -97,10 +108,10 @@ function vorbereitungen(url){
             articleDiv = $("article");
             break;
         case "www.faz.net":
-            articleDiv = $('.FAZArtikelContent');
+            articleDiv = $('#FAZContent');
             break;
         case "www.focus.de":
-            articleDiv = $('#content');
+            articleDiv = $('.content');
             break;
         case "www.n-tv.de":
             articleDiv = $('.content');
@@ -120,6 +131,9 @@ function vorbereitungen(url){
         case "www.rp-online.de":
             articleDiv = $('article');
             break;
+        case "www.taz.de":
+            articleDiv = $('article');
+            break;
         case "www.nytimes.com":
             articleDiv = $('#story');
             break;
@@ -130,8 +144,8 @@ function vorbereitungen(url){
     //clears the current text from the site
     articleDiv.empty();
     //fill the site with the compared text from newsdiffs
+    articleDiv.append("<div id='ueberschrift'></div>");
     articleDiv.append("<div id='compare'></div>");
-    $("<div id='ueberschrift'></div>").insertBefore("#compare");
 }
 
 check_feed_url();

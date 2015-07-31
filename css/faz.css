@@ -1,26 +1,8 @@
 #compare {
-    border-bottom-color: rgb(0, 0, 0);
-    border-bottom-style: none;
-    border-bottom-width: 0px;
-    border-image-outset: 0px;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(0, 0, 0);
-    border-left-style: none;
-    border-left-width: 0px;
-    border-right-color: rgb(0, 0, 0);
-    border-right-style: none;
-    border-right-width: 0px;
-    border-top-color: rgb(0, 0, 0);
-    border-top-style: none;
-    border-top-width: 0px;
     color: rgb(0, 0, 0);
-    display: block;
     font-family: Georgia, serif;
     font-size: 16px;
-    height: 120px;
+    height: auto;
     line-height: 24px;
     margin-bottom: 20px;
     margin-left: 0px;
@@ -29,34 +11,19 @@
     padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 0px;
+    padding-top: 3px;
     text-align: left;
     width: 570px;
 }
-#compare h2{
-    border-bottom-color: rgb(0, 0, 0);
-    border-bottom-style: none;
-    border-bottom-width: 0px;
-    border-image-outset: 0px;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(0, 0, 0);
-    border-left-style: none;
-    border-left-width: 0px;
-    border-right-color: rgb(0, 0, 0);
-    border-right-style: none;
-    border-right-width: 0px;
-    border-top-color: rgb(0, 0, 0);
-    border-top-style: none;
-    border-top-width: 0px;
+#ueberschrift h2{
     color: rgb(0, 0, 0);
     display: block;
     font-family: Georgia, serif;
     font-size: 28px;
     font-weight: normal;
-    height: 56px;
+}
+#ueberschrift{
+    width: 570px;
     margin-bottom: 6px;
     margin-left: 0px;
     margin-right: 0px;
@@ -64,9 +31,8 @@
     padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 0px;
+    padding-top: 30px;
     text-align: left;
-
 }
 
 del {    

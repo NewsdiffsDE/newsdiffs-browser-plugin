@@ -10,14 +10,13 @@
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
-    padding-bottom: 23px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 20px;
     padding-top: 0px;
-    vertical-align: baseline;
-    width: 658px;
+    height: auto;
 }
-#compare h2{
+#ueberschrift{
     border-bottom-color: rgb(47, 47, 47);
     border-bottom-style: none;
     border-bottom-width: 0px;
@@ -36,20 +35,18 @@
     border-top-style: none;
     border-top-width: 0px;
     color: rgb(47, 47, 47);
-    display: block;
     font-family: Merriweather;
     font-size: 42px;
     font-stretch: normal;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    height: 156px;
     line-height: 52px;
-    margin-bottom: 5px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
     outline-color: rgb(47, 47, 47);
+
+    padding: auto;
+    text-align: center;
+    padding-top: 40px;
 }
 
 del {    

@@ -5,13 +5,18 @@
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
-    height: 2413px;
     line-height: 19.488000869751px;
     margin-bottom: 15px;
     width: 520px;
+
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-top: 50px;
+    height: auto;
 }
 
-#compare h2{
+#ueberschrift{
     color: rgb(0, 0, 0);
     display: inline;
     font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
@@ -22,6 +27,8 @@
     height: auto;
     line-height: 27.9839992523193px;
     width: auto;
+    padding-left: 60px;
+    padding-top: 40px;
 }
 
 del {    

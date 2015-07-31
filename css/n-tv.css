@@ -7,26 +7,34 @@
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
-    height: 110px;
+    height: auto;
     line-height: 22px;
     margin-bottom: 22px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 0px;
+    padding-top: 50px;
     width: 640px;
 }
-#compare h2{
+#ueberschrift{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    width: 940px;
+    padding-left: 60px;
+    padding-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    width: 640px;
+}
+#ueberschrift h2{
     color: rgb(0, 0, 0);
-    display: block;
     font-family: Arial, sans-serif;
     font-size: 24px;
     font-stretch: normal;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    height: 30px;
-    line-height: 30px;
-    width: 640px;
 }
 
 del {    

@@ -1,44 +1,43 @@
 #compare {
     -webkit-font-smoothing: antialiased;
     color: rgb(0, 0, 0);
-    display: block;
     font-family: Arial, Helvetica, Tahoma, sans-serif;
     font-size: 17px;
-    height: 112px;
+    height: auto;
     line-height: 28px;
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
     padding-bottom: 23px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: auto;
+    padding-right: auto;
     padding-top: 0px;
     vertical-align: baseline;
     width: 658px;
 }
-#compare h2{
+#ueberschrift h2{
     -webkit-font-smoothing: antialiased;
     color: rgb(0, 0, 0);
-    display: block;
     font-family: Swiss, Arial, Helvetica, Tahoma, sans-serif;
     font-size: 90px;
     font-weight: normal;
     height: 196px;
     letter-spacing: -2.25px;
     line-height: 98px;
+}
+#ueberschrift{
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
-    padding-bottom: 8px;
+    padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
     vertical-align: baseline;
     width: 950px;
 }
-
 del {    
     background-color: #ffa0a0;
 }  

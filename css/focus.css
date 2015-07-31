@@ -1,5 +1,4 @@
 #compare {
-    display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     height: 210px;
@@ -8,21 +7,23 @@
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
-    padding-bottom: 19px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-top: 30px;
     width: 468px;
+    height: auto;
 }
 
-#compare h2{
-    display: inline;
+#ueberschrift{
+    text-align: center;
+    padding-top: 40px;
+}
+#ueberschrift h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    height: auto;
     line-height: 33px;
-    width: auto;
 }
 
 del {    

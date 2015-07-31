@@ -9,30 +9,30 @@ ins {
 
 #compare {
     color: rgb(0, 0, 0);
-    display: block;
     font-family: SternTundra, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     height: 448px;
     line-height: 28px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 12px;
-    padding-bottom: 0px;
+    padding-bottom: 30px;
+    padding-left: 90px;
+    width: 540px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-#compare h2{
+#ueberschrift{
+    margin-bottom: 60px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20px;
+    width: 940px;
+    padding-left: 10px;
+}
+#ueberschrift h2{
     color: rgb(0, 0, 0);
-    display: block;
     font-family: SternMetric, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 44px;
     font-weight: bold;
     height: 44px;
     line-height: 44px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: -4px;
-    width: 940px;
 }
-
